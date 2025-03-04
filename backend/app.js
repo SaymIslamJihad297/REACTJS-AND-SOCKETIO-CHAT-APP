@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const http = require('http');
@@ -26,8 +27,7 @@ io.on("connection", (socket) => {
         console.log(`❌ User disconnected: ${socket.id}`);
     });
 });
-
-server.listen(8080, () => {
-    console.log("App started listening on port 8080");
-
+const PORT = process.env.PORT || 8080;
+server.listen(PORT, () => {
+    console.log(`App started listening on port ${PORT}`);
 })
