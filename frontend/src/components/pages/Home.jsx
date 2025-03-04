@@ -4,7 +4,7 @@ import SearchBar from "../includes/SearchBar.jsx";
 import Group from "../includes/UserGroup.jsx";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:8080");
+const socket = io("https://reactjs-and-socketio-chat-app-backend.onrender.com/");
 
 function Home() {
     const [message, setMessage] = useState(""); // Input field state
